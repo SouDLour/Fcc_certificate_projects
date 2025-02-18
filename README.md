@@ -4,7 +4,7 @@ Repo will contain my projects to obtain my FCC-Data Analysis with Python certifi
 
 ### Projects List (checklist):
 
-- [ ]  Mean-Variance-Standard Deviation Calculator 
+- [x] Mean-Variance-Standard Deviation Calculator 
 
 - [ ] Demographic Data Analyzer
 
@@ -13,9 +13,3 @@ Repo will contain my projects to obtain my FCC-Data Analysis with Python certifi
 - [ ] Page TIme Series Visualizer
 
 - [ ] Sea Level Predictor
-
-
-
-
-
-
