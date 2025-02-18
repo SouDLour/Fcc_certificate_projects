@@ -1,4 +1,12 @@
 Methods:
     Unique() Should return object values of columns as expected
     Check array issues.
+
+    .nunique() = Gets the Amount of different races.
+        Eg: 5 races in an array. This will return number 5.
+
+    [column].value_counts() = Return the Amount of each race!
+
+    .to_frame() = Converts a terminal frame into a pandas Frame.
+    
     
