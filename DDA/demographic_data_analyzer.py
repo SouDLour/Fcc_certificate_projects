@@ -3,24 +3,47 @@ import pandas as pd
 
 def calculate_demographic_data(print_data=True):
     # Read data from file
-    df = pd.read_csv('DDA/adult_data.csv')
+    df = pd.read_csv('adult_data.csv')
 
-    # How many of each race are represented in this dataset? This should be a Pandas series with race names as the index labels.
+    # How many of each race are represented in this dataset? This should be a Pandas 
+    # series with race names as the index labels.
     rc = pd.Series(df['race'])
     
     race_count = rc.value_counts()
 
     # What is the average age of men?
-    average_age_men = None
+    filt_df = df.loc[(df['sex'] == 'Male'),['sex','age']]
+    avg_age_men = filt_df['age'].mean().round()
+    
+    average_age_men = int(avg_age_men)
 
     # What is the percentage of people who have a Bachelor's degree?
-    percentage_bachelors = None
+    total_edu = df['education'].value_counts().sum()
+    total_education = total_edu
+    total_bach = df[df['education']=='Bachelors']['education']
+    total_bach_count = total_bach.count()
+    percent_of_bach = (total_bach_count/ total_education) * 100
+    
+    percentage_bachelors = percent_of_bach 
 
     # What percentage of people with advanced education (`Bachelors`, `Masters`, or `Doctorate`) make more than 50K?
     # What percentage of people without advanced education make more than 50K?
 
+    ###RICH ADVANCED EDUCATION HIGHER EDUCATION
+    higher_education_rich = pd.DataFrame(df)
+    higher_education_rich.loc[higher_education_rich['education'].isin(['Bachelors','Masters','Doctorate']),['salary','education']]
+    total_higher_edu = higher_education_rich.education.value_counts().sum()
+
+    smart_rich = higher_education_rich.loc[(higher_education_rich['education'].isin(['Bachelors','Masters','Doctorate'])) & (higher_education_rich['salary'] == '<=50K'),['salary','education']]
+    total_high_50 = smart_rich.value_counts().sum()
+    
+    percent_rich = total_high_50 / total_higher_edu * 100
+    high_edu_rich_perc = percent_rich.round() 
+
+    ###POOR PERCENTAGE PEOPLE ADVANCE EDUCATION LESS THAN 50K
+
     # with and without `Bachelors`, `Masters`, or `Doctorate`
-    higher_education = None
+    higher_education = high_edu_rich_perc
     lower_education = None
 
     # percentage with salary >50K
