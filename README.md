@@ -6,7 +6,7 @@ Repo will contain my projects to obtain my FCC-Data Analysis with Python certifi
 
 - [x] Mean-Variance-Standard Deviation Calculator 
 
-- [ ] Demographic Data Analyzer
+- [x] Demographic Data Analyzer
 
 - [ ] Medical Data Visualizer
 
