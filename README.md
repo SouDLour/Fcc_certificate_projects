@@ -8,7 +8,7 @@ Repo will contain my projects to obtain my FCC-Data Analysis with Python certifi
 
 - [x] Demographic Data Analyzer
 
-- [ ] Medical Data Visualizer
+- [x] Medical Data Visualizer
 
 - [ ] Page TIme Series Visualizer
 
