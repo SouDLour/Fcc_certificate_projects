@@ -10,6 +10,6 @@ Repo will contain my projects to obtain my FCC-Data Analysis with Python certifi
 
 - [x] Medical Data Visualizer
 
-- [ ] Page TIme Series Visualizer
+- [x] Page TIme Series Visualizer
 
 - [ ] Sea Level Predictor
